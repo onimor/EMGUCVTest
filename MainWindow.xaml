@@ -22,10 +22,12 @@
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <Border VerticalAlignment="Stretch"  Margin="1" CornerRadius="3" BorderBrush="DarkBlue"  Background="Black">
-                            <Image   Source="{Binding Source}"></Image>
-                            <!--<wfi:WindowsFormsHost>
-                                <test:ImageBox Image="{Binding Source,Mode=OneWay}" />
-                            </wfi:WindowsFormsHost>-->
+                            <!--<Image   Source="{Binding Source}"></Image>-->
+                            <local:EmguImageBoxHost
+        FunctionalMode="PanAndZoom"
+        Image="{Binding Source}"/>
+
+                          
                         </Border>
 
                     </DataTemplate>

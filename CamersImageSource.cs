@@ -14,8 +14,8 @@ namespace EMGUCVTest
 
 
 
-        private ImageSource _source;
-        public ImageSource Source
+        private Mat _source;
+        public Mat Source
         {
             get => _source;
             private set
@@ -47,7 +47,7 @@ namespace EMGUCVTest
             {
                 using var mat = new Mat();
                 if (VideoCapture.Retrieve(mat))
-                    Source = mat.ToBitmapSource();
+                    Source = mat;
             }
             catch
             {
